@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Creating a basic html form</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="form">
+
+        <form action="index.html" method="post" class="register-form">
+
+            <input type="text" name="username" placeholder="Username" />
+            <input type="password" name="passwd" placeholder="Password" />
+            <input type="text" name="email" placeholder="Email" />
+            <button>Create</button>
+            <p class="message">Already Registered? <a href="#">Login</a>
+            </p>
+
+        </form>
+
+        <form class="login-form">
+          <input type="text" placeholder="Username" />
+          <input type="password" placeholder="Password" />
+          <button>login</button>
+          <p class="message">Not Registered? <a href="#">Register</a></p>
+
+      </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+
+    <script>
+      $('.message a').click(function(){
+        $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+      });
+
+    </script>
+
+  </body>
+</html>
